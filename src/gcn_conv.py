@@ -3,12 +3,15 @@ This is tutorial from https://pytorch-geometric.readthedocs.io/en/latest/notes/c
 If you find it useful go to above link, which has full description and code.
 
 This files include GCNConv Class definition. GCNConv Class consist of 5 steps
+GCNConv: Update Node features by sum(norm(f(x_u))) V is U's neighbors
 
 1. add self-loop index
 2. linear transformation
 3. calculate normalization coefficient
 4. Normalize features
 5. Aggregate
+
+function call procedures: forward -> propagate -> message -> aggregate -> update
 """
 
 import torch
